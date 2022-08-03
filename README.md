@@ -1,10 +1,7 @@
-# tratamientos_descentralizados
+# Plugin SaniHUB DWATS
 Plugin para geração desenhos esquemáticos de Sistemas Descentralizados
 
-# Wiki do projeto
-- [veja a wiki do projeto](https://gitlab.com/sanibid/tratamientos_descentralizados/-/wikis/home)
 
-Plugin SaniHUB DWATS
 
 Orientação para instalação:
 
