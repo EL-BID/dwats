@@ -1,0 +1,11 @@
+icon_warning = r":/plugins/tratamientos_descentralizados/icons/warning.png"
+icon_info = r":/plugins/tratamientos_descentralizados/icons/info.png"
+icon_edit = r":/plugins/tratamientos_descentralizados/icons/edit.png"
+icon_new = r":/plugins/tratamientos_descentralizados/icons/new.png"
+icon_open = r":/plugins/tratamientos_descentralizados/icons/open.png"
+icon_rep_PDF = r":/plugins/tratamientos_descentralizados/icons/rep_PDF.png"
+icon_save = r":/plugins/tratamientos_descentralizados/icons/save.png"
+icon_icon = r":/plugins/tratamientos_descentralizados/icons/icon.png"
+icon_add = r":/plugins/tratamientos_descentralizados/icons/add.png"
+icon_remove = r":/plugins/tratamientos_descentralizados/icons/remove.png"
+

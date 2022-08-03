@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SaniBidStarSDDockWidgetBase</class>
+ <widget class="QDockWidget" name="SaniBidStarSDDockWidgetBase">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>333</width>
+    <height>561</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>SaniBid Star SD</string>
+  </property>
+  <widget class="QWidget" name="dockWidgetContents">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>311</width>
+      <height>451</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="inicio">
+     <attribute name="title">
+      <string>Inicio</string>
+     </attribute>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>291</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Para iniciar o projeto é necessário inserir alguns dados, para isso siga as instruções abaixo.</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="Line" name="line">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>281</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>281</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Deseja importar informações de um projeto do SaniBid RedBasica?</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>110</y>
+        <width>241</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Deseja dimensionar o tanque de sedimentação?</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>270</y>
+        <width>131</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Inserir dados adicionais:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_inserir">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>290</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Inserir dados</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>370</y>
+        <width>291</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>380</y>
+        <width>251</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>IMPORTANTE: Antes de executar o projeto, os dados obrigatórios devem ser inseridos.</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="Line" name="line_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>410</y>
+        <width>291</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QWidget" name="widget" native="true">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>80</y>
+        <width>201</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <widget class="QRadioButton" name="radioButton">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>8</y>
+         <width>82</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Sim</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_2">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>8</y>
+         <width>82</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Não</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="widget_2" native="true">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>130</y>
+        <width>201</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <widget class="QRadioButton" name="radioButton_3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>8</y>
+         <width>82</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Sim</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_4">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>8</y>
+         <width>82</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Não</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>320</y>
+        <width>211</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Verificar dados:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_verdados">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>340</y>
+        <width>111</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ver dados entrada</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_dadosaida">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>340</y>
+        <width>101</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ver dados saída</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>160</y>
+        <width>251</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Deseja dimensionar custos?</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="widget_3" native="true">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>180</y>
+        <width>201</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <widget class="QRadioButton" name="radioButton_5">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>8</y>
+         <width>82</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Sim</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_6">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>8</y>
+         <width>82</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Não</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>210</y>
+        <width>211</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Deseja calcular a área útil do projeto?</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="widget_4" native="true">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>230</y>
+        <width>201</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <widget class="QRadioButton" name="radioButton_7">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>82</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Sim</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_8">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>10</y>
+         <width>82</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Não</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Tanque">
+     <attribute name="title">
+      <string>Tanque de Sedimentação</string>
+     </attribute>
+     <widget class="QLabel" name="label_21">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>141</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Editar dados de entrada:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_7">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Editar</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>80</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ver dados</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_22">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>350</y>
+        <width>261</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="tabletTracking">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>IMPORTANTE: Ao editar os valores de entrada deve executar novamente o projeto para que as alterações tenham efeito.</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_23">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>111</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ver dados de saída:</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="reator">
+     <attribute name="title">
+      <string>Reator Anaeróbio RAC</string>
+     </attribute>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>141</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Editar dados de entrada:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Editar</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>70</y>
+        <width>111</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ver dados de saída:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>90</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ver dados</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>345</y>
+        <width>261</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="tabletTracking">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>IMPORTANTE: Ao editar os valores de entrada deve executar novamente o projeto para que as alterações tenham efeito.</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="custos">
+     <attribute name="title">
+      <string>Custos</string>
+     </attribute>
+     <widget class="QLabel" name="label_15">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>350</y>
+        <width>261</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="tabletTracking">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>IMPORTANTE: Ao editar os valores de entrada deve executar novamente o projeto para que as alterações tenham efeito.</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_5">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Editar</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_16">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>141</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Editar dados de entrada:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_6">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>80</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ver dados</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_17">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>111</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ver dados de saída:</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="sobre">
+     <attribute name="title">
+      <string>Sobre</string>
+     </attribute>
+     <widget class="QLabel" name="label_18">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>300</y>
+        <width>281</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <italic>true</italic>
+        <bold>true</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="text">
+       <string>PLUGIN EM DESENVOLVIMENTO!</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_19">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>231</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Projeto BID/UFBA</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_20">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>131</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Versão 0.01</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButtonExecutar">
+    <property name="geometry">
+     <rect>
+      <x>204</x>
+      <y>470</y>
+      <width>101</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Executar Projeto</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

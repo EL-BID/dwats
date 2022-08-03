@@ -1,0 +1,88 @@
+<RCC>
+    <qresource prefix="/plugins/tratamientos_descentralizados">
+        <file>icons/new.png</file>
+        <file>icons/rep_PDF.png</file>
+        <file>icons/edit.png</file>
+        <file>icons/save.png</file>
+        <file>icons/open.png</file>
+        <file>icons/warning.png</file>
+        <file>icons/ICON_DW.png</file>
+        <file>icons/ICON_ADD.png</file>
+        <file>icons/ICON_MOVE.png</file>
+        <file>icons/ICON_ROTATE.png</file>
+        <file>icons/BID.png</file>
+        <file>icons/saniHub.png</file>
+        <file>icons/UFBA.png</file>
+        <file>images/img_layer_without_constructed_area/vista_1t-4reat.png</file>
+        <file>images/img_layer_without_constructed_area/vista_1t-5reat.png</file>
+        <file>images/img_layer_without_constructed_area/vista_1t-6reat.png</file>
+        <file>images/img_layer_without_constructed_area/vista_st-4reat.png</file>
+        <file>images/img_layer_without_constructed_area/vista_st-5reat.png</file>
+        <file>images/img_layer_without_constructed_area/vista_st-6reat.png</file>
+        <file>images/img_layer_with_constructed_area/vista_1t-4reat_ap.png</file>
+        <file>images/img_layer_with_constructed_area/vista_1t-5reat_ap.png</file>
+        <file>images/img_layer_with_constructed_area/vista_1t-6reat_ap.png</file>
+        <file>images/img_layer_with_constructed_area/vista_st-4reat_ap.png</file>
+        <file>images/img_layer_with_constructed_area/vista_st-5reat_ap.png</file>
+        <file>images/img_layer_with_constructed_area/vista_st-6reat_ap.png</file>
+        <!-- Refatoração da organização de arquivos -->
+        <!-- Template do relatório -->
+        <file>resources/pt/templates/report.html</file>
+        <file>resources/pt/templates/report_script.js</file>
+        
+        <!-- Imagens do plugin -->
+        <!-- Imagens do dock -->
+        <file>resources/pt/images/dock/without_st/4/corteAA.png</file>
+        <file>resources/pt/images/dock/without_st/4/corteBB.png</file>
+        <file>resources/pt/images/dock/without_st/4/corteCC.png</file>
+        <file>resources/pt/images/dock/without_st/4/planta_baixa.png</file>
+        <file>resources/pt/images/dock/without_st/4/vista_superior.png</file>
+        <file>resources/pt/images/dock/with_st/4/corteAA.png</file>
+        <file>resources/pt/images/dock/with_st/4/corteBB.png</file>
+        <file>resources/pt/images/dock/with_st/4/corteCC.png</file>
+        <file>resources/pt/images/dock/with_st/4/planta_baixa.png</file>
+        <file>resources/pt/images/dock/with_st/4/vista_superior.png</file>
+        <file>resources/pt/images/dock/with_st/4+/corteAA.png</file>
+        <file>resources/pt/images/dock/with_st/4+/corteBB.png</file>
+        <file>resources/pt/images/dock/with_st/4+/corteCC.png</file>
+        <file>resources/pt/images/dock/with_st/4+/planta_baixa.png</file>
+        <file>resources/pt/images/dock/with_st/4+/vista_superior.png</file>
+
+        <!-- Imagens do relatório -->
+        <file>resources/pt/images/report/without_st/4/corteAA.png</file>
+        <file>resources/pt/images/report/without_st/4/corteBB.png</file>
+        <file>resources/pt/images/report/without_st/4/corteCC.png</file>
+        <file>resources/pt/images/report/without_st/4/planta_baixa.png</file>
+        <file>resources/pt/images/report/without_st/4/vista_superior.png</file>
+        <file>resources/pt/images/report/without_st/5/corteAA.png</file>
+        <file>resources/pt/images/report/without_st/5/corteBB.png</file>
+        <file>resources/pt/images/report/without_st/5/corteCC.png</file>
+        <file>resources/pt/images/report/without_st/5/planta_baixa.png</file>
+        <file>resources/pt/images/report/without_st/5/vista_superior.png</file>
+        <file>resources/pt/images/report/without_st/6/corteAA.png</file>
+        <file>resources/pt/images/report/without_st/6/corteBB.png</file>
+        <file>resources/pt/images/report/without_st/6/corteCC.png</file>
+        <file>resources/pt/images/report/without_st/6/planta_baixa.png</file>
+        <file>resources/pt/images/report/without_st/6/vista_superior.png</file>
+        <file>resources/pt/images/report/with_st/4/corteAA.png</file>
+        <file>resources/pt/images/report/with_st/4/corteBB.png</file>
+        <file>resources/pt/images/report/with_st/4/corteCC.png</file>
+        <file>resources/pt/images/report/with_st/4/planta_baixa.png</file>
+        <file>resources/pt/images/report/with_st/4/vista_superior.png</file>
+        <file>resources/pt/images/report/with_st/5/corteAA.png</file>
+        <file>resources/pt/images/report/with_st/5/corteBB.png</file>
+        <file>resources/pt/images/report/with_st/5/corteCC.png</file>
+        <file>resources/pt/images/report/with_st/5/planta_baixa.png</file>
+        <file>resources/pt/images/report/with_st/5/vista_superior.png</file>
+        <file>resources/pt/images/report/with_st/6/corteAA.png</file>
+        <file>resources/pt/images/report/with_st/6/corteBB.png</file>
+        <file>resources/pt/images/report/with_st/6/corteCC.png</file>
+        <file>resources/pt/images/report/with_st/6/planta_baixa.png</file>
+        <file>resources/pt/images/report/with_st/6/vista_superior.png</file>
+
+        <!-- Arquivos de tradução. Não adicionados ainda. -->
+        <!--file>resources/translations/en.qm</file-->
+        <!--file>resources/translations/es.qm</file-->
+    </qresource>
+    <qresource prefix="/new/prefix12"/>
+</RCC>

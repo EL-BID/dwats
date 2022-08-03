@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Arquivo template para a biblioteca jinja2 renderizar o relatório.   -->
+<head>
+    <meta charset="UTF-8" name="qrichtext" content="1">
+    <title>Title</title>
+    <script src="qrc:/plugins/tratamientos_descentralizados/resources/pt/templates/report_script.js">
+
+    </script>
+    <style>
+        body {
+            font-size: 16px;
+        }
+        .page {
+            padding-top: 5%;
+            padding-left: 12.5%;
+            padding-right: 7%;
+            font-family: "Arial Narrow";
+        }
+        .top-logo {background: #1f3864; color: #ffffff;
+            padding-left: 1.0em; padding-right: 1.0em; vertical-align: center;
+            font-weight: bold; font-size: 1.4em}
+        .bottom-logo {background: #c5e0b3; color: #385724;
+            padding-left: 1.0em; padding-right: 1.0em; vertical-align: center;
+            font-weight: bold; font-size: 1.4em}
+        .top-header {column-span: 3; padding-left: 1%}
+        .bottom-header {width: 33%; padding-left: 1%}
+        .header-table {font-size: 0.8em;  border-spacing:0; width: 100%}
+
+        .bold-title {font-size: 1.0em; font-weight: bold; text-align: center;
+                     margin-top: 3.0em; margin-bottom: 3.0em}
+        .report-paragraph {text-align: justify; font-size: 1.0em}
+        .topic-text {font-size: 1.0em; font-weight: bold; text-align: left;
+        }
+
+        .component-table {font-size: 1.0em; border-spacing: 1em 0; }
+        .component-table-header {font-size: 1.0em; font-weight: bold; text-align: left}
+        .component-desc {font-size: 1.0em; white-space: nowrap; width: 1%}
+        .component-value {font-size: 1.0em; font-weight: bold; text-align: left}
+
+        .img-center {display: block;  width: 80%;}
+        .img-left { width: 40%}
+        .img-right {  width: 40%}
+        .page-number {text-align: right; font-weight: bold}
+
+        .compliance-check-table {
+            border-collapse: collapse;
+            margin: 25px 0;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+        .compliance-check-table thead tr {
+            background-color: #009879;
+            color: #ffffff;
+            text-align: left;
+            font-weight: bold;
+        }
+        .compliance-check-table td {
+            padding: 12px 15px;
+        }
+        .compliance-check-table tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        .compliance-check-table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+
+        .compliance-check-table tbody tr:last-of-type {
+            border-bottom: 2px solid #009879;
+        }
+        .compliance-check-description {text-align: left}
+        .compliance-check-results {text-align: center}
+    </style>
+</head>
+<body>
+    <!-- Macro utilizado para adicionar o cabeçalho em cada página-->
+    {% macro header() %}
+         <table class="header-table">
+            <tr>
+                <th rowspan="2" class="top-logo" align="center">SaniHUB</th>
+                <td class="top-header" colspan="3">Cliente: {{ project_info.client }}</td>
+            </tr>
+            <tr>
+                <td class="top-header" colspan="3">Descrição do Projeto: {{ project_info.project_name }}</td>
+            </tr>
+            <tr>
+                <th rowspan="2" class="bottom-logo" align="center">DWATS</th>
+                <td class="bottom-header">Local: {{ project_info.local }}</td>
+                <td class="bottom-header">Estado: {{ project_info.state }}</td>
+                <td class="bottom-header">Pais: {{ project_info.country }}</td>
+            </tr>
+            <tr>
+                <td class="bottom-header">Projetista: {{ project_info.designer }}</td>
+                <td class="bottom-header">Versão: {{ project_info.version }}</td>
+            </tr>
+        </table>
+    {% endmacro %}
+
+    <div id="page1" class="page">
+        <p class="page-number">1</p>
+        {{ header() }}
+        <p class="bold-title">RESUMO DO PROJETO DE DIMENSIONAMENTO DE ESTAÇÃO DE TRATAMENTO DE ÁGUAS RESIDUÁRIAS</p>
+        {% if should_import_rede_basica %}
+            <p class="report-paragraph">A Estação de Tratamento de águas residuárias foi projetada para uma vazão máxima
+                horária de esgoto sanitário de final de plano de
+                {{ from_rede_basica_data.maximum_horly_sludge_flow_final|format2Dec }} l/s e uma vazão de infiltração de
+                {{ from_rede_basica_data.infiltration_flow|format2Dec }} l/s, com coeficiente de máxima vazão diária de
+                {{ project_data.k1CoefDayMaxConsume|format2Dec }} e coeficiente de máxima vazão horária de
+                {{ project_data.k2CoefDayMaxConsume|format2Dec }}, que resulta em uma vazão de esgoto sanitário média de final de plano
+                de {{ calculation.get_final_average_daily_sludge_flow()|format2Dec }} m³/dia, e concentrações de DQO e
+                DBO em {{ project_data.concentrationDQOEntrance|format2Dec }} g/m³ e
+                {{ project_data.concentrationDBOEntrance|format2Dec }} g/m³, respectivamente.</p>
+        {% else %}
+            <p class="report-paragraph">A Estação de Tratamento de águas residuárias foi projetada para uma população de {{ project_data.final_population }}
+                habitantes, com consumo per capita de água de {{ project_data.consWater|format2Dec }} L / hab x dia e
+                uma vazão de infiltração de {{ project_data.final_infiltration_flow|format2Dec }} m³/s,
+                que resulta em uma vazão média de entrada de {{ calculation.getDailyAverageFlow()|format2Dec }} m³/dia,
+                e concentrações de DQO e DBO em {{ project_data.concentrationDQOEntrance|format2Dec }} g/m³
+                e {{ project_data.concentrationDBOEntrance|format2Dec }} g/m³,  respectivamente.</p>
+        {% endif %}
+        {% if has_sedimentation_tank %}
+            <p class="report-paragraph">Os principais parâmetros de cálculo adotados foram: Tempo de detenção hidráulica (TDH) de
+                {{ project_data.tdh|format1Dec }} horas, intervalo de tempo para remoção de lodo de {{ project_data.intervalTimeRemovalSludge|int }}
+                meses e temperatura de operação do reator de {{ project_data.tempOperReactor|format2Dec }} graus centígrados.</p>
+        {% endif %}
+        <p class="report-paragraph">O sistema de tratamento projetado é composto por:</p>
+        {% set i = 1 %}
+        <p class="topic-text">{{ i }}. Dimensões do Sistema Projetado</p> {% set i = i + 1 %}
+        <table class="component-table">
+            <tr>
+                {% if has_sedimentation_tank %}
+                    <th colspan=2 class="component-table-header">Tanque de Sedimentação</th>
+                {% endif %}
+                <th colspan=2 class="component-table-header">Reator anaeróbio compartimentado com {{ '%02d' % project_data.numCompartRac }} compartimentos</th>
+            </tr>
+            <tr>
+                {% if has_sedimentation_tank %}
+                    <td class="component-desc">Largura útil: </td>
+                    <td class="component-value">{{ project_data.widthTank|format1Dec }} m</td>
+                {% endif %}
+                <td class="component-desc">Largura útil: </td>
+                <td class="component-value">{{ calculation.getWidthAdoptedCompartmentRAC()|format1Dec }} m</td>
+                <td></td>
+            </tr>
+            <tr>
+                {% if has_sedimentation_tank %}
+                    <td class="component-desc">Comprimento útil: </td>
+                    <td class="component-value">{{ calculation.getLengthTankSedimentation()|format1Dec }} m</td>
+                {% endif %}
+                <td class="component-desc">Comprimento útil: </td>
+                <td class="component-value">{{ calculation.getLengthCompartmentRAC()|format1Dec }} m</td>
+                <td></td>
+            </tr>
+            <tr>
+                {% if has_sedimentation_tank %}
+                    <td class="component-desc">Altura útil: </td>
+                    <td class="component-value">{{ project_data.depthTank|format1Dec }} m</td>
+                {% endif %}
+                <td class="component-desc">Altura útil: </td>
+                <td class="component-value">{{ project_data.depthOutRac|format1Dec }} m</td>
+                <td></td>
+            </tr>
+            <tr>
+                {% if has_sedimentation_tank %}
+                    <td class="component-desc">Volume: </td>
+                    <td class="component-value">{{ calculation.getVolumeTankSedimentation()|format1Dec }} m³</td>
+                {% endif %}
+                <td class="component-desc">Volume: </td>
+                <td class="component-value">{{ calculation.getVolumeReactor()|format1Dec }} m³</td>
+                <td></td>
+            </tr>
+
+        </table>
+
+        {% if should_calculate_area %}
+            <p class="report-paragraph">O sistema ocupará uma área útil de {{ calculation.getAreaUtilTotal()|format1Dec }} m², e
+                considerando um coeficiente de majoração, uma área construída total de aproximadamente
+                {{ calculation.getConstructedAreaTotal()|format1Dec }} m².</p>
+        {% else %}
+            <p class="report-paragraph">O sistema ocupará uma área útil de {{ calculation.getAreaUtilTotal()|format1Dec }} m².</p>
+        {% endif %}
+
+        <P class="topic-text">{{ i }}. Eficiência do Sistema Projetado</P> {% set i = i + 1 %}
+        <P class="report-paragraph">O sistema apresenta eficiência na remoção de DQO no processo de
+            {{ (calculation.getEfficiencyRemovalTotalDQOProcess() * 100)|round|int }} %, com concentração de
+            DQO no efluente final de {{calculation.getConcentrationDQOEffluentFinal()|format2Dec }} g/m³,
+            e eficiência na remoção de DBO em {{ (calculation.getEfficiencyRemovalTotalDBOProcess() * 100)|round|int }} %,
+            com concentração de DBO no efluente final de {{ calculation.getConcentrationDBOEffluentFinal()|format2Dec }} g/m³.</P>
+        <P class="report-paragraph">Sob essas condições, o sistema apresenta geração estimada de biogás de
+            {{ calculation.getDailyFlowBiogas()|format2Dec }} m³/dia e por consequente produção estimada de gás carbônico
+            equivalente em {{ calculation.getEmissionGasCarbonicEquivalentDaily()|format2Dec }} kg CO<sub>2</sub>e / dia.</P>
+        {% if costs %}
+            <P class="topic-text">{{ i }}. Custos do sistema projetado</P> {% set i = i + 1 %}
+            <P class="report-paragraph">Considerando as características do tipo de terreno do local e os materiais utilizados construção da Estação de Tratamento de Águas Residuais projetada foram obtidos os seguintes custos por habitante:</P>
+            {% if has_sedimentation_tank %}
+                    {% if should_import_rede_basica %}
+                        <P class="report-paragraph">Custo do Tanque de sedimentação (U$/hab): U$ {{ (costs.getTotalCostsTS() / costs.final_population)|format2Dec }}</P>
+                    {% else %}
+                        <P class="report-paragraph">Custo do Tanque de sedimentação (U$/hab): U$ {{ (costs.getTotalCostsTS() / project_data.final_population)|format2Dec }}</P>
+                    {% endif %}
+            {% endif %}
+            {% if should_import_rede_basica %}
+                <P class="report-paragraph">Custo do reator compartimentado (U$/hab): U$ {{ (costs.getTotalCostsReactor() / costs.final_population)|format2Dec }}</P>
+                <P class="report-paragraph">Custo total da Estação de Tratamento (U$/hab): {{ costs.costPerInhabitant(
+                                has_sedimentation_tank|int, costs.final_population|int)|format2Dec }}</P>
+            {% else %}
+                <P class="report-paragraph">Custo do reator compartimentado (U$/hab): U$ {{ (costs.getTotalCostsReactor() / project_data.final_population)|format2Dec }}</P>
+                <P class="report-paragraph">Custo total da Estação de Tratamento (U$/hab): {{ costs.costPerInhabitant(
+                                has_sedimentation_tank|int, project_data.final_population|int)|format2Dec }}</P>
+            {% endif %}
+        {% endif %}
+    </div>
+    <div id="page2" class="page">
+        <p class="page-number">2</p>
+        {{ header() }}
+        <p class="topic-text">{{ i }}. Verificações de Conformidades</p> {% set i = i + 1 %}
+        <p class="report-paragraph">Considerando os dados fornecidos para início de plano, o sistema apresenta as
+            seguintes condições de conformidade:</p>
+        <table class="compliance-check-table" id="compliance-tests">
+            <thead>
+                <tr>
+                    <td>Item</td>
+                    <td>Situação de conformidade</td>
+                </tr>
+            </thead>
+           <tbody>
+               {% macro def_compliance_results(check) %}
+                   {% if check %}
+                       <td class="compliance-check-results">Conforme</td>
+                   {% else %}
+                       <td class="compliance-check-results" style="color: #f53a3a; font-weight: bold;">Não Conforme</td>
+                   {% endif %}
+               {% endmacro -%}
+               {% if has_sedimentation_tank %}
+                    <tr>
+                        <td class="compliance-check-description">Relação comprimento/ largura do tanque de sedimentação</td>
+                        {{ def_compliance_results(validation.validation_dimensions_ts()[0]) }}
+                    </tr>
+                {% endif %}
+                <tr>
+                    <td class="compliance-check-description">Velocidade ascensional de fluxo</td>
+                    {{ def_compliance_results(validation.validation_climb_speed()[0]) }}
+                </tr>
+                <tr>
+                    <td class="compliance-check-description">Tempo de detenção hidráulica para o reator anaeróbio</td>
+                    {{ def_compliance_results(validation.validation_hydraulic_holding_time_rac()[0]) }}
+                </tr>
+               {% if has_sedimentation_tank %}
+                    <tr>
+                        <td class="compliance-check-description">Tempo de detenção hidráulica para o tanque de sedimentação</td>
+                        {{ def_compliance_results(validation.validation_hydraulic_holding_time_sedimentation_tank()[0]) }}
+                    </tr>
+               {% endif %}
+           </tbody>
+        </table>
+
+        <P class="topic-text">{{ i }}. Desenhos esquemáticos do sistema projetado</P> {% set i = i + 1 %}
+        <P class="report-paragraph">As Figuras abaixo representam o dimensionamento do sistema de tratamento de águas residuárias.</P>
+        <div>
+            <div>
+                <img src='{{ img1 }}' class="img-center" alt="Planta Baixa"/>
+                <img src='{{ img2 }}' class="img-center" alt="Corte AA"/>
+            </div>
+        </div>
+    </div>
+    <div class="page" id="page3">
+        <p class="page-number">3</p>
+        {{ header() }}
+        <div style="margin-top: 50px">
+            <img src='{{ img3 }}' class="img-left" alt="Corte BB"/>
+            <img src='{{ img4 }}' class="img-right" alt="Corte CC"/>
+        </div>
+        <div style="/*clear: both; display: inline-block*/">
+            {% if has_sedimentation_tank %}
+                <P class="report-paragraph">Onde:
+                    H1 = {{ project_data.depthTank|format1Dec }} m;
+                    C1 = {{ calculation.getLengthTankSedimentation()|format1Dec }} m;
+                    L2 = {{ project_data.widthShafts|format1Dec }} m;
+                    C2 = {{ calculation.getLengthCompartmentRAC()|format1Dec }} m;
+                    H2 = {{ project_data.depthOutRac|format1Dec }} m;
+                    L1 = {{ project_data.widthTank|format1Dec }} m;
+                    L3 = {{ calculation.getWidthAdoptedCompartmentRAC()|format1Dec }}m</P>
+            {% else %}
+                <P class="report-paragraph">Onde:
+                    H1 = {{ project_data.depthOutRac|format1Dec }} m;
+                    L2 = {{ project_data.widthShafts|format1Dec }} m;
+                    C2 = {{ calculation.getLengthCompartmentRAC()|format1Dec }} m;
+                    H2 = {{ project_data.depthOutRac|format1Dec }} m;
+                    L3 = {{ calculation.getWidthAdoptedCompartmentRAC()|format1Dec }}m</P>
+            {% endif %}
+            <P class="report-paragraph">Hst - Head space do tanque de sedimentação</P>
+            <P class="report-paragraph">Hsr - Head space do reator</P>
+        </div>
+    </div>
+</body>
+</html>
