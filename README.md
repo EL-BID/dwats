@@ -1,4 +1,4 @@
-# Plugin SaniHUB DWATS
+# <img src="https://github.com/sanihub/dwats/blob/main/icons/BID.png" alt="drawing" width="50"/> <img src="https://github.com/sanihub/dwats/blob/main/icons/saniHub.png" alt="drawing" width="50"/> <img src="https://github.com/sanihub/dwats/blob/main/icons/UFBA.png" alt="drawing" width="50"/>Plugin SaniHUB DWATS
 Plugin para desenvolvimento de projeto básico e geração desenhos esquemáticos de Sistemas Descentralizados.
 
 
