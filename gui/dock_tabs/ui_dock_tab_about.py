@@ -35,7 +35,7 @@ class DockTabAbout(DockTab):
         lb_notice.setWordWrap(True)
         lb_notice.setAlignment(Qt.AlignHCenter)
         lb_notice.setFont(self.utils.formatItalicText())
-        lb_notice.setMinimumHeight(30)
+        lb_notice.setMinimumHeight(50)
         gridLayoutAbout.addWidget(lb_notice, 1, 0, 1, 0, Qt.AlignCenter)
         
         lb_version = QLabel(self.tr('SaniHUB DWATS - Versão') + ' ' + version)
