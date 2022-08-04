@@ -49,7 +49,7 @@ class DockTabAbout(DockTab):
         urlLink = "<a href=\'https://www.iadb.org/'> www.iadb.org </a>"
         lb_quick_guide.setText(self.tr('Guia Rápido disponivel em ') + urlLink)
         lb_quick_guide.setOpenExternalLinks(True)
-        gridLayoutAbout.addWidget(lb_quick_guide, 4, 0, 1, 0)
+        #gridLayoutAbout.addWidget(lb_quick_guide, 4, 0, 1, 0)
 
         lb_financed = QLabel()
         lb_financed.setText(self.tr('O software foi financiado por: \nA Facilidade de Investimentos para a ' 
@@ -64,7 +64,7 @@ class DockTabAbout(DockTab):
         lb_financed.setWordWrap(True)
         lb_financed.setFont(QFont('Arial', 8))
         lb_financed.setAlignment(Qt.AlignJustify)
-        lb_financed.setMinimumHeight(210)
+        lb_financed.setMinimumHeight(220)
         gridLayoutAbout.addWidget(lb_financed, 5, 0, 1, 0)
         
         lb_bid = QLabel()
