@@ -11,8 +11,8 @@ Plugin para desenvolvimento de projeto básico e geração desenhos esquemático
 - Clique em Instalar a partir do ZIP;
 - Selecione o arquivo do plugin e clique em Instalar Complemento;
 - Pronto plugin instalado!
-- ![imagem](https://github.com/dagobertomedeiros/images/blob/main/tela_instala_plugin.png =200px)
-- <img src="https://github.com/dagobertomedeiros/images/blob/main/tela_instala_plugin.png" alt="drawing" width="400"/>
+ <img src="https://github.com/dagobertomedeiros/images/blob/main/tela_instala_plugin.png" alt="drawing" width="400"/>
 
 ## Para acessar o plugin:
 - No menu Complementos vá até SaniHUB DWATS e, em seguida clique em SaniHUB DWATS.
+ <img src="https://github.com/dagobertomedeiros/images/blob/main/tela_acessa_plugin.png" alt="drawing" width="400"/>
