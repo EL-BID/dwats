@@ -1,5 +1,5 @@
 # <img src="https://github.com/sanihub/dwats/blob/main/icons/BID.png" alt="drawing" width="50"/> <img src="https://github.com/sanihub/dwats/blob/main/icons/saniHub.png" alt="drawing" width="50"/> <img src="https://github.com/sanihub/dwats/blob/main/icons/UFBA.png" alt="drawing" width="50"/>Plugin SaniHUB DWATS
-Plugin para desenvolvimento de projeto básico e geração desenhos esquemáticos de Sistemas Descentralizados.
+Software livre para projetos simplificados e descentralizados de tratamento de águas residuárias.
 
 
 
@@ -25,3 +25,31 @@ Plugin para desenvolvimento de projeto básico e geração desenhos esquemático
 - Relatório em PDF com um resumo de dimensionamento, constando diversas informações, passando por dimensões da ETE, eficiência do sistema, estimativa de custos, desenhos esquemáticos e outras;
 - Projeção da ETE sobre o mapa, permitindo ao projetista calcular e visualizar se a unidade cabe no local esperado para construção;
 - Entre outras.
+
+## Colaboradores
+#### Banco Interamericano de Desenvolvimento - BID
+- Sérgio Pérez Monforte
+- Amália Palácios
+- Maria Rodriguez Vera
+- Marta Fernández Gonzalez
+
+#### Universidade Federal da Bahia – UFBA
+- João Carlos Salles Pires da Silva - Reitor
+- Vivien Luciane Viaro – Coordenadora
+- Luciano Matos Queiroz
+- Gabriel da Silva Rangel
+- Manoel Gomes de Mendonça Neto
+- Ricardo Eugênio Porto Vieira
+- Renato Lima Novais
+- Dagoberto Medeiros
+- Fredson Menezes Sumi
+- Caio Costa Sá da Nova
+
+#### Consultores Ad hoc
+- Ivan Paiva
+- Flávia Rebouças
+- Martin Dell’oro
+- Federico Sanches
+
+## Licença
+O SaniHub DWATS é licenciado sob a General Public Licence - GNU GPLv3.
