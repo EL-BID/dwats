@@ -1,3 +1,7 @@
+![analytics image (flat)](https://raw.githubusercontent.com/vitr/google-analytics-beacon/master/static/badge-flat.gif)
+![analytics](https://www.google-analytics.com/collect?v=1&cid=555&t=pageview&ec=repo&ea=open&dp=/dwats/readme&dt=&tid=UA-4677001-16)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=EL-BID_dwats&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=EL-BID_dwats)
+
 # <img src="https://github.com/sanihub/dwats/blob/main/icons/BID.png" alt="drawing" width="50"/> <img src="https://github.com/sanihub/dwats/blob/main/icons/saniHub.png" alt="drawing" width="50"/> <img src="https://github.com/sanihub/dwats/blob/main/icons/UFBA.png" alt="drawing" width="50" height="49"/>Plugin SaniHUB DWATS
 Software livre para projetos simplificados e descentralizados de tratamento de águas residuárias.
 
